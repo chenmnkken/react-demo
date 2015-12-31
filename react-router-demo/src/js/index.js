@@ -1,18 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import createBrowserHistory from 'history/lib/createBrowserHistory';
 
 import App from './component/app';
 import About from './component/about';
 import Concat from './component/concat';
 import List from './component/list';
 
-import {Router, Route} from 'react-router';
-
-const history = createBrowserHistory();
+import {Router, Route, browserHistory} from 'react-router';
 
 const router = (
-    <Router history={history}>
+    <Router history={browserHistory}>
         <Route path="/" component={App}>
             <Route path="about" component={About} />
             <Route path="concat" component={Concat} />
